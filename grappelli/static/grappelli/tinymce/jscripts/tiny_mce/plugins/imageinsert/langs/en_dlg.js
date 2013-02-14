@@ -1,0 +1,1 @@
+tinyMCE.addI18n('en.imageinsert_dlg', {'dialog_title': "Insert Images", 'imageinsert_desc': "Insert Multiple Images"});

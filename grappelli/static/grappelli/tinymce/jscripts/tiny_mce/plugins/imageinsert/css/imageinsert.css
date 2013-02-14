@@ -1,0 +1,121 @@
+body {
+	padding: 0;
+}
+
+#content {
+    margin: 0;
+    height: 100%;
+}
+
+#header {
+	position: fixed;
+	height: 15px;
+	padding: 5px 0;
+	width: 100%;
+	z-index: 10;
+	border-bottom: 1px solid #CCC;
+}
+
+#fb-link {
+	float: right;
+	margin-right: 10px;
+}
+
+#breadcrumb {
+	padding-left: 160px;
+	float: left;
+}
+
+#breadcrumb ul li {
+	display: inline-block;
+}
+
+#breadcrumb ul li::before {
+	content: "\003E";
+	padding: 0 5px;
+}
+
+#breadcrumb ul li:first-child::before {
+	display: none;
+}
+
+#sidebar {
+    overflow: hidden;
+    position: fixed;
+    z-index: 20;
+}
+
+#sidebar > div {
+	margin: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #F2F2F2;
+}
+
+#folders {
+	max-height: 200px;
+	overflow-x: auto;
+	overflow-y: auto;
+}
+
+#browser::before, #sidebar, #header {
+	background-color: #F8F8F8;
+}
+
+#browser {
+    margin-left: 151px;
+    position: relative;
+}
+
+#browser::before, #sidebar {
+	height: 100%;
+	width: 150px;
+}
+
+#browser::before, #sidebar {
+	border-right: solid 1px #CCC;
+}
+
+#browser::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: -151px;
+	z-index: -10;
+}
+
+.image-list {
+	padding: 10px;
+	padding-top: 35px;
+}
+
+.image-list li {
+	display: inline-block;
+	vertical-align: top;
+}
+
+img {
+	font-size: 0;
+	padding: 2px;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+img.selected {
+	border: 1px solid black;
+	background-color: #c8d8fb;
+}
+
+label {
+	display: block;
+}
+
+#btn-insert {
+	width: 100px;
+	margin: 0 auto;
+	display: block;
+}
+
+#loading {
+	width: 100px;
+	margin: 0 auto;
+}
