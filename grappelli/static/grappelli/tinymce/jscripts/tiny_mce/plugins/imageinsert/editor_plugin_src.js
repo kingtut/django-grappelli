@@ -1,6 +1,6 @@
 (function() {
         // Load plugin specific language pack
-        tinymce.PluginManager.requireLangPack('en.imageinsert_dlg');
+        //tinymce.PluginManager.requireLangPack('en.imageinsert_dlg');
 
         tinymce.create('tinymce.plugins.ImageInsert', {
                 /**
@@ -27,8 +27,8 @@
 
                         // Register example button
                         ed.addButton('imageinsert', {
-                                title : 'imageinsert.image_desc',
-                                cmd : 'mceImageInsert'
+                                title: 'Insert Multiple Images',
+                                cmd: 'mceImageInsert'
                                 //image : url + '/img/example.gif'
                         });
 

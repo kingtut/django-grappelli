@@ -31,7 +31,9 @@ var ImageInsert = {
         
         this.loading_state();
         this.get_image_list();
-        this.get_folder_list();
+        this.get_folder_list(function() {
+            self.folders.find('a[data-dir="/blog_images"]').click();
+        });
     },
     
     loading_state: function() {
@@ -52,11 +54,20 @@ var ImageInsert = {
         this.browser.load(url);
     },
     
-    get_folder_list: function(directory) {
-        var url = this.build_url('folder', directory);
-        var self = this;
+    get_folder_list: function(directory, callback) {
+        if (typeof directory == 'function') {
+            callback = directory;
+            directory = undefined;
+        }
+        
+        var self = this,
+            url = this.build_url('folder', directory);
+        
         this.folders.load(url, function(e) {
             self.build_breadcrumb(directory);
+            if (typeof callback == 'function') {
+                callback();
+            }
         });
     },
     
