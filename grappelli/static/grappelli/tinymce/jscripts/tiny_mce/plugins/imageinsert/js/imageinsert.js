@@ -105,7 +105,9 @@ var ImageInsert = {
                 'height': new_dim[1]
             };
             
-            ed.execCommand('mceInsertContent', false, tinyMCEPopup.editor.dom.createHTML('img', args), {skip_undo: 1});
+            var image_html = tinyMCEPopup.editor.dom.createHTML('p', null, tinyMCEPopup.editor.dom.createHTML('img', args));
+            
+            ed.execCommand('mceInsertContent', false, image_html, {skip_undo: 1});
         });
 		
 		ed.undoManager.add();
